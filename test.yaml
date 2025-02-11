@@ -1,6 +1,6 @@
 ---
 - name: Install Nginx on Ubuntu Server
-  hosts: ubuntu_servers
+  hosts: all
   become: true
   vars:
     nginx_service: nginx
