@@ -1,6 +1,6 @@
 ---
 - name: Install Nginx on Ubuntu Server
-  hosts: all
+  hosts: ubuntu_servers
   become: true
   vars:
     nginx_service: nginx
@@ -15,4 +15,8 @@
         name: "{{ nginx_service }}"
         state: present
 
-    - name: Ensure Nginx is started
+    - name: Ensure Nginx is started and enabled
+      service:
+        name: "{{ nginx_service }}"
+        state: started
+        enabled: true
