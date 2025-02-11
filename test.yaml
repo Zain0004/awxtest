@@ -15,4 +15,4 @@
         name: "{{ nginx_service }}"
         state: present
 
-    - name: Ensure Nginx is starte
+    - name: Ensure Nginx is started
